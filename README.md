@@ -1,2 +1,0 @@
-# snoothbrush
-Snail dentistry website
