@@ -2,25 +2,63 @@
 <html>
 <style>
 /* Create two columns/boxes that floats next to each other */
+body{
+   background-color:#d3f5e3;
+}
 nav {
   float: top;
   width: 100%;
   height: 12%;
   background: #ccc;
-  padding: 20px;
+  padding: 1px;
 }
 
 /* Style the list inside the menu */
-nav li {
-    display: inline-block;
-    justify-content:space-around;
-    list-style-type:none;
-    padding: 15px 15px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
+li {
+  float: left;
+  font-size: 30px;
+  padding: 15px
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+.active {
+  background-color: #04AA6D;
+}
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+h1{
+	font-size:40px;
+	text-align: center;
+	
+}
+h2{
+	text-align: center;
+}
+p{
+	font-size: 20px;
+}
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
 </style>
 <head>
-     <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css"> 
+
     <title  style="text-align:center;">SnoothBrush</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -31,19 +69,19 @@ nav li {
 <section>
   <nav>
     <ul>
-     	  <li><a href="#">About</a></li>
+     	  <li><a href="about.html">About</a></li>
     	  <li><a href="#">Technology</a></li>
      	  <li><a href="#">Tooth buy back</a></li>
 	  <li><a href="#">Book An Appointment</a></li>
     </ul>
   </nav>
-	<p>Welcome to the world's premiere snail dentistry office!</p>
-	<img src = "snailTeethDiagram.jpg" alt = "snail tooth diagram">
+	<h2>Welcome to the world's premiere snail dentistry office!</h2>
+	<img class="displayed" src = "snailTeethDiagram.jpg" alt = "snail tooth diagram" >
    
 	<p> Here at Snoothbrush, We believe that every tooth matters. whether you
 have one, or twenty thousand, we are here for you <p>
 
-	<h1 style="background-color:powderblue;">Revolutionary techniques</h1>
+	<h2 style="background-color:powderblue;">Revolutionary techniques</h2>
 <p style="border:2px solid MediumSeaGreen;"> We have developed our own custom tools and processes in order for your
 lovely snail radula to be as healthy as possible. We also continually check
 on ongoing research to make sure we are as up to date as possible <p/>
