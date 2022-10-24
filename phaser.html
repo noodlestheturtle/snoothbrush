@@ -68,6 +68,7 @@ IMG.displayed {
 
 </style>
 <head>
+    
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
     <title  style="text-align:center;">SnoothBrush</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -101,46 +102,79 @@ how to care for a snail's teeth </h2>
         physics: {
             default: 'arcade',
             arcade: {
-                gravity: { y: 200 }
+             
+		
             }
         },
         scene: {
             preload: preload,
-            create: create
+            create: create,
+	    update: update
         }
     };
 
     var game = new Phaser.Game(config);
 
-    function preload ()
+   function preload ()
     {
-        this.load.setBaseURL('http://labs.phaser.io');
+        
 
-        this.load.image('sky', 'assets/skies/space3.png');
-        this.load.image('logo', 'assets/sprites/phaser3-logo.png');
-        this.load.image('red', 'assets/particles/red.png');
+        this.load.image('sky', 'images/snails.png');
+        this.load.image('logo', 'images/tool.png',  { frameWidth: 32, frameHeight: 48 });
     }
 
     function create ()
     {
         this.add.image(400, 300, 'sky');
+	platforms = this.physics.add.staticGroup();
 
-        var particles = this.add.particles('red');
+        platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 
-        var emitter = particles.createEmitter({
-            speed: 100,
-            scale: { start: 1, end: 0 },
-            blendMode: 'ADD'
-        });
+        platforms.create(600, 400, 'ground');
 
-        var logo = this.physics.add.image(400, 100, 'logo');
+        player = this.physics.add.sprite(400, 100, 'logo');
+	player.setScale(0.1);
+        player.setBounce(0.2);
+        player.setCollideWorldBounds(true);
 
-        logo.setVelocity(100, 200);
-        logo.setBounce(1, 1);
-        logo.setCollideWorldBounds(true);
+	
+	cursors = this.input.keyboard.createCursorKeys();
+	const collisionHappened = (dog, cat) => {
+ 		 this.add.text(0, 0, 'Hello World', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' });
+	}
 
-        emitter.startFollow(logo);
-    }
+	this.physics.add.collider(player, platforms, collisionHappened, null,this);
+	
+   }
+
+    function update ()
+    {
+        if (cursors.left.isDown)
+        {
+	    
+            player.x -= 5;
+
+       
+        }
+        else if (cursors.right.isDown)
+        {
+            player.x += 5;
+
+         
+        }  else
+        {
+            player.setVelocityX(0);
+
+	}
+        if (cursors.up.isDown)
+        {
+            player.y -= 5;
+        }
+	if(cursors.down.isDown){
+ 	    player.y += 5;
+	}
+   }
+
     </script>
 
 </section>
