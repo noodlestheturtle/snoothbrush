@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<style>
+/* Create two columns/boxes that floats next to each other */
+body{
+   background-color:black;
+}
+nav {
+  float: top;
+  width: 100%;
+  height: 12%;
+  background: black;
+  padding: 1px;
+}
+
+/* Style the list inside the menu */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  font-size: 30px;
+  padding: 15px
+  color: black;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: black;
+  color: black;
+}
+.active {
+  background-color: #04AA6D;
+}
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+
+h1{
+	font-size:40px;
+	text-align: center;
+	
+}
+h2{
+	text-align: center;
+}
+p{
+	font-size: 20px;
+	text-align: center;
+}
+
+
+.foot{
+	font-size: 15px;
+}
+
+.hello:hover{
+	font-size: 0;
+}
+.hello:hover:after{
+	content: attr(data-hover);
+	font-size:24px;
+	text-align: center;
+	color:white;	
+}
+
+      .box {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
+        height: 300px;
+
+      }
+      .box div {
+        width: 16%;
+        padding: 15px;
+        text-align: center;
+        color: #000000;
+        font-family: arial, sans-serif;
+      }
+
+    .card {
+   	 position:absolute;
+   	 width:300px;
+    	 height:300px;
+    	 bottom:0px;
+   	 right:25%;
+    	 left:50%;
+      	 margin-left:-150px;
+    }
+    .card .img-top {
+        display: none;
+        position: absolute;
+   	 width:300px;
+    	 height:300px;
+    	 bottom:0px;
+   	 right:25%;
+    	 left:50%;
+      	 margin-left:-150px;
+    }
+     .card .img-back {
+	 display: inline;
+         position: absolute;
+     	 width:300px;
+    	 height:300px;
+    	 bottom:0px;
+   	 right:25%;
+    	 left:50%;
+      	 margin-left:-150px;
+
+    }
+    .card:hover .img-top {
+ 	display: inline;
+        position: absolute;
+     	 width:300px;
+    	 height:300px;
+    	 bottom:0px;
+   	 right:25%;
+    	 left:50%;
+      	 margin-left:-150px;
+    }
+</style>
+<head>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body>
+
+	<h1>Snoothbrush</h1>
+<section>
+  <nav>
+    <ul>
+     	  <li><a href="about.html">About</a></li>
+    	  <li><a href="#">Technology</a></li>
+     	  <li><a href="phaser.html">Training</a></li>
+	  <li><a href="appointment.html">Book An Appointment</a></li>
+    </ul>
+  </nav>
+	<div class="box">
+	<div class="hello"
+	data-hover="oh. im alone"></div> 
+	
+	<div class="hello""
+	data-hover="Wait. is someone there?"></div>
+	
+	<div class="hello""
+	data-hover="Who are you?"></div>
+	
+	<div class="hello""
+	data-hover="are you here to talk to me?"></div>
+	
+	<div class="hello""
+	data-hover="im afraid im not a very good conversationalist"></div>
+	
+	<div class="hello""
+	data-hover="But you can always leave a message in the hole, where all lost things go">
+	</div>
+	</div>
+	
+
+	<div class = "card">
+	<img src="hole.jpg" class="img-back" alt="Card Back">
+        <a href="https://github.com/noodlestheturtle/snoothbrush"><img src="teethYum.jpg" class="img-top" alt="Card Front"></a>
+	</div>
+
+</body>
+</html>
