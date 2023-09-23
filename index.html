@@ -1,100 +1,181 @@
 <!DOCTYPE html>
 <html>
 <style>
-/* Create two columns/boxes that floats next to each other */
-body{
-   background-color:#d3f5e3;
-}
-nav {
-  float: top;
-  width: 100%;
-  height: 12%;
-  background: #ccc;
-  padding: 1px;
-}
+  /* Create two columns/boxes that floats next to each other */
+  body {
+    background-color: #d3f5e3;
+  }
 
-/* Style the list inside the menu */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+  nav {
+    float: top;
+    width: 100%;
+    height: 12%;
+    background: #ccc;
+    padding: 1px;
+  }
 
-li {
-  float: left;
-  font-size: 30px;
-  padding: 15px
-}
+  /* Style the list inside the menu */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
 
-li a {
-  display: block;
-  padding: 8px;
-  background-color: #dddddd;
-}
-.active {
-  background-color: #04AA6D;
-}
-li a:hover {
-  background-color: #555;
-  color: white;
-}
+  li {
+    float: left;
+    font-size: 30px;
+    padding: 15px
+  }
+
+  li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+
+  li a:hover {
+    background-color: #555;
+    color: white;
+  }
 
 
-h1{
-	font-size:40px;
-	text-align: center;
-	
-}
-h2{
-	text-align: center;
-}
-p{
-	font-size: 20px;
-}
-IMG.displayed {
+  h1 {
+    font-size: 40px;
+    text-align: center;
+
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  IMG.displayed {
     display: block;
     margin-left: auto;
-    margin-right: auto }
+    margin-right: auto
+  }
 
+  #comment_section_preamble {
+    padding-left: 25px;
+  }
 
-.foot{
-	font-size: 15px;
-}
+  #comment_section_header {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
 
+  #comment_section {
+    border-left: 6px dashed;
+  }
 
+  .comment {
+    border: 2px solid;
+    padding: 16px;
+    margin: 8px;
+  }
+
+  .comment_author {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+
+  .comment_content {
+    font-size: 1.2em;
+  }
+
+  .foot {
+    font-size: 15px;
+  }
 </style>
+
 <head>
 
-    <title  style="text-align:center;">SnoothBrush</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title style="text-align:center;">SnoothBrush</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 </head>
+
 <body>
+  <h1>Snoothbrush</h1>
+  <section>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="frog.html">Technology</a></li>
+        <li><a href="phaser.html">Training</a></li>
+        <li><a href="appointment.html">Book An Appointment</a></li>
+      </ul>
+    </nav>
+    <h2>Welcome to the world's premiere snail dentistry office!</h2>
+    <img class="displayed" src="snailTeethDiagram.jpg" alt="snail tooth diagram">
 
-	<h1>Snoothbrush</h1>
-<section>
-  <nav>
-    <ul>
-     	  <li><a href="index.html">About</a></li>
-    	  <li><a href="frog.html">Technology</a></li>
-     	  <li><a href="phaser.html">Training</a></li>
-	  <li><a href="appointment.html">Book An Appointment</a></li>
-    </ul>
-  </nav>
-	<h2>Welcome to the world's premiere snail dentistry office!</h2>
-	<img class="displayed" src = "snailTeethDiagram.jpg" alt = "snail tooth diagram" >
-   
-	<p> Here at Snoothbrush, We believe that every tooth matters. whether you
-have one, or twenty thousand, we are here for you <p>
+    <p> Here at Snoothbrush, We believe that every tooth matters. whether you
+      have one, or twenty thousand, we are here for you
+    <p>
 
-	<h2 style="background-color:powderblue;">Revolutionary techniques</h2>
-<p style="border:2px solid MediumSeaGreen;"> We have developed our own custom tools and processes in order for your
-lovely snail radula to be as healthy as possible. We also continually check
-on ongoing research to make sure we are as up to date as possible. Dental formula 3 + D + 2 + R + 2 + D + 3  <p/>
- <footer>
-  <p class = "foot">Author: NoodlesTheTurtle</p>
-  <p class = "foot">For legal reasons, this is a joke. not a real dentistry</p>
-</footer> 
+    <h2 style="background-color:powderblue;">Revolutionary techniques</h2>
+    <p style="border:2px solid MediumSeaGreen;"> We have developed our own custom tools and processes in order for your
+      lovely snail radula to be as healthy as possible. We also continually check
+      on ongoing research to make sure we are as up to date as possible. Dental formula 3 + D + 2 + R + 2 + D + 3
+      <p />
+    <div id="comment_section">
+      <div id="comment_section_preamble">
+        <div id="comment_section_header">Visitor Reviews</div>
+        <a target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfAB_SFY_3k__R9_BhvZfTWe2z3Av8DWSWwIAt3v4D-RRMJJA/viewform?fbzx=926935195296033787">
+          <button>Leave a comment!</button>
+        </a>
+        <!-- <form>
+          Leave a comment<br>
+          Your name: <input id="author" type="textbox"></input><br>
+          Comment: <input id="new_comment" type="textarea"></input><br>
+          <input type="submit" onclick="submit_comment()">Submit</input>
+        </form> -->
+      </div>
+    </div>
+    <footer>
+      <p class="foot">Author: NoodlesTheTurtle</p>
+      <p class="foot">For legal reasons, this is a joke. not a real dentistry</p>
+    </footer>
+    <script>
+      let spreadsheetId = "1H807OVVFgGM0mSvTo6uFLjx75uDEIjV6X0TK5rya6JA"
+      let range = "B2:C10000"
+      let comments;
+      fetch(
+        `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=AIzaSyA0ZlNnBiZJ97bbx0etA_X6B6c32xjZ5RU`
+      ).then((response) => response.json()
+      ).then(cells => {
+        let comment_section = document.getElementById("comment_section")
+        comments = cells.values.reverse();
+        if (comments != undefined)
+          comments.map((comment) => {
+            let c = document.createElement("div")
+            c.classList = ["comment"]
+            c.innerHTML = `<div class='comment_author'>${comment[0]} says:</div><div class='comment_content'>${comment[1]}</div>`
+            comment_section.appendChild(c)
+          })
+      });
+      function submit_comment() {
+        let author = document.getElementById("author")
+        let new_comment = document.getElementById("new_comment")
+        if (author.value.length < 1) {
+          alert("Author field cannot be empty"); return;
+        } else if (new_comment.value.length < 1) {
+          alert("Comment cannot be empty"); return;
+        } else {
+          // Google sheets API doesn't not support API key auth to add responses. OAuth must be used, so a backend server will be required :(
+        }
+      }
+    </script>
 </body>
+
 </html>
